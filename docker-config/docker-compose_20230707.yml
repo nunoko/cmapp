@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: cmbiz-mis-app
+    restart: always
+    working_dir: /var/www
+    volumes:
+      - ../php/src:/var/www
+  
+  # nginx
+  nginx:
+    image: nginx:1.25.1-alpine
+    container_name: cmbiz-mis-nginx
+    restart: always
+    ports: 
+      - "8001:80"
+    volumes:
+      - ../php/src:/var/www
+      - ./nginx:/etc/nginx/conf.d
+
+
+
+

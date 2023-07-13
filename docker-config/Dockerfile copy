@@ -1,0 +1,9 @@
+FROM php:8.2-fpm-alpine
+
+RUN yum update -y && yum install  -y \
+    git \
+    curl \
+    zip \
+    unzip
+
+WORKDIR /var/www
