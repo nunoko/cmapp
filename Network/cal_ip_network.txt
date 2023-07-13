@@ -1,0 +1,18 @@
+1) 192.168.22.50/30
+IP Subnet Calculator
+Subnet Mask=255.255.255.252
+Network Address=192.168.22.48
+Broadcast Address=192.168.22.51
+IP Host Range:192.168.22.49-.50
+Total Subnet /30 = 256/4 = 64 subnet
+Total host per subnet = 4/2 = 2 host
+จำนวน subnet และจำนวน host ต่อ subnet มีเท่าไร
+
+11111111.11111111.11111111.11111111
+
+1      1      1      1      1      1      1      1 
+2^7    2^6    2^5    2^4    2^3    2^2    2^1    2^0
+128    64     32     16     8      4      2      1
+128    192    224    240    252    254    255
+
+subnet mask=255.255.255.252
